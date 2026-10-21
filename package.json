@@ -1,0 +1,91 @@
+{
+  "name": "@particle-academy/fancy-whats-new",
+  "version": "0.1.0",
+  "description": "Show these once, stacked, then remember they were seen: on the first load after a refresh or login, the groups of cards newer than what each person last saw -- release notes after an update, a welcome, new posts, anything. localStorage or any store; a button re-opens the current cards.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Particle-Academy/fancy-whats-new.git"
+  },
+  "homepage": "https://github.com/Particle-Academy/fancy-whats-new#readme",
+  "bugs": "https://github.com/Particle-Academy/fancy-whats-new/issues",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "tsc --noEmit && eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "tsup"
+  },
+  "keywords": [
+    "react",
+    "whats-new",
+    "notices",
+    "announcements",
+    "onboarding",
+    "welcome",
+    "release-notes",
+    "seen-once",
+    "fancy",
+    "particle-academy"
+  ],
+  "dependencies": {
+    "@particle-academy/fancy-app-update": ">=0.7.0 <2.0"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "@particle-academy/react-fancy": ">=5.41.0 <6.0.0"
+  },
+  "devDependencies": {
+    "@particle-academy/react-fancy": "^5.50.0",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.0.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "eslint": "^10.8.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "jsdom": "^25.0.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.0",
+    "typescript-eslint": "^8.65.0",
+    "vitest": "^4.1.11"
+  },
+  "overrides": {
+    "esbuild": "^0.28.1",
+    "source-map-js": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}
