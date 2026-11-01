@@ -1,6 +1,6 @@
 {
   "name": "@particle-academy/fancy-whats-new",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Show these once, stacked, then remember they were seen: on the first load after a refresh or login, the groups of cards newer than what each person last saw -- release notes after an update, a welcome, new posts, anything. localStorage or any store; a button re-opens the current cards.",
   "repository": {
     "type": "git",
@@ -59,7 +59,7 @@
   "peerDependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "@particle-academy/react-fancy": ">=5.41.0 <6.0.0"
+    "@particle-academy/react-fancy": ">=5.41.0 <7.0.0"
   },
   "devDependencies": {
     "@particle-academy/react-fancy": "^5.50.0",

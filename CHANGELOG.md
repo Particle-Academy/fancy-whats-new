@@ -11,7 +11,11 @@ upgrading. Each one says what you must do.
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-11-01
+
 ### Changed
+
+- **The `@particle-academy/react-fancy` peer range now also accepts 6.x** (`>=5.41.0 <6.0.0` to `>=5.41.0 <7.0.0`). react-fancy 6.0.0 makes `Button` default to `type="button"` instead of submitting an enclosing form (Change Council CC-fancy-0003). Audited for that: its one `Button` (re-open the current cards) is an action and does not sit inside a form. No `Button` needed `type="submit"` and no `PromptInput` is used, so the package behaves the same on 5 and 6. On 6 its `Button`s also stop submitting a host form you happen to render it inside. Verified against react-fancy 6.0.0 locally (suite, typecheck and build all green, same test count as on 5). The devDependency stays on 5 for now: `@particle-academy/fancy-app-update` 0.7.0 (a dependency of this package) still caps react-fancy below 6, so a lockfile on 6 cannot resolve until it ships its own widened release. It moves to `^6.0.0` in a dev-only follow-up after that; nothing published changes. Widening only adds candidates, so the react-fancy you already have still resolves. **Consumer action:** none on react-fancy 5; on react-fancy 6 it works as-is.
 
 - Test environment: jsdom moved to 30 (devDependency only), dropping the deprecated `whatwg-encoding`. Consumer action: none.
 
