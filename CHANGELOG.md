@@ -11,6 +11,13 @@ upgrading. Each one says what you must do.
 
 ## [Unreleased]
 
+### Changed
+
+- **Releases need a lab-run certificate.** `publish.yml` gains a read-only
+  `lab-certificate` job that every publishing job needs: a tag is published only
+  when the fancy-labs lab has certified that exact version and commit. Consumers
+  do nothing; this changes how releases are cut, not what the package does.
+
 ## [0.1.1] - 2026-11-01
 
 ### Changed
